@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-gray: #2a2a2a;
+    --bright-red: #ff3333;
+    --light-gray: #444;
+    --text-color: #ffffff;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--dark-gray);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+header {
+    background-color: var(--light-gray);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(255, 51, 51, 0.3);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+}
+
+.nav-btn {
+    background-color: var(--bright-red);
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--bright-red);
+}
+
+.nav-btn:hover {
+    background-color: transparent;
+    color: var(--bright-red);
+    transform: scale(1.05);
+}
+
+/* Main Content */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Hero Section (Home Page) */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--bright-red);
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--bright-red);
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(255, 51, 51, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* Fade-in Effect */
+.fade-in {
+    animation: fadeIn 0.8s ease-in forwards;
+    opacity: 0;
+}
+
+.fade-in:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.fade-in:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.fade-in:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.fade-in:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--bright-red);
+    color: var(--text-color);
+    border-radius: 50%;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--bright-red);
+}
+
+.social-icons a:hover {
+    background-color: transparent;
+    transform: scale(1.2) rotateY(180deg);
+    box-shadow: 0 0 20px rgba(255, 51, 51, 0.6);
+}
+
+/* About Section */
+.about {
+    padding: 40px 20px;
+}
+
+.about h1 {
+    font-size: 2.5rem;
+    color: var(--bright-red);
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.about p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Tech Stack Section */
+.techstack {
+    padding: 40px 20px;
+}
+
+.techstack h1 {
+    font-size: 2.5rem;
+    color: var(--bright-red);
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.tech-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.tech-item {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--light-gray);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.tech-item:hover {
+    background-color: var(--dark-gray);
+    border: 2px solid var(--bright-red);
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgba(255, 51, 51, 0.3);
+}
+
+.tech-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.tech-item:hover img {
+    transform: scale(1.1);
+}
+
+.tech-item p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--bright-red);
+}
+
+/* Certifications Section */
+.certifications {
+    padding: 40px 20px;
+}
+
+.certifications h1 {
+    font-size: 2.5rem;
+    color: var(--bright-red);
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.cert-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.cert-item {
+    text-align: center;
+    background-color: var(--light-gray);
+    border-radius: 10px;
+    padding: 15px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.cert-item:hover {
+    border: 2px solid var(--bright-red);
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgba(255, 51, 51, 0.3);
+}
+
+.cert-image {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cert-image:hover {
+    transform: scale(1.05);
+}
+
+.cert-item p {
+    margin-bottom: 0;
+}
+
+.cert-item a {
+    color: var(--bright-red);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cert-item a:hover {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.contact h1 {
+    font-size: 2.5rem;
+    color: var(--bright-red);
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.contact ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact ul li {
+    margin: 0;
+}
+
+.contact ul a {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--bright-red);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--bright-red);
+}
+
+.contact ul a:hover {
+    background-color: transparent;
+    color: var(--bright-red);
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: var(--light-gray);
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    border-top: 2px solid var(--bright-red);
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* Responsive Design - Tablet (321px to 768px) */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .profile-pic {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .navbar {
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .nav-btn {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+
+    .about h1,
+    .techstack h1,
+    .certifications h1,
+    .contact h1 {
+        font-size: 2rem;
+    }
+
+    .tech-list {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 20px;
+    }
+
+    .tech-item img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .cert-list {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+    }
+
+    .social-icons {
+        gap: 20px;
+    }
+
+    .social-icons a {
+        width: 50px;
+        height: 50px;
+        font-size: 1.4rem;
+    }
+}
+
+/* Responsive Design - Mobile (320px and below) */
+@media (max-width: 320px) {
+    .hero h1 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .nav-btn {
+        width: 100%;
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    main {
+        padding: 20px 10px;
+    }
+
+    .about h1,
+    .techstack h1,
+    .certifications h1,
+    .contact h1 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    .about p {
+        font-size: 0.95rem;
+        text-align: left;
+    }
+
+    .tech-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .tech-item {
+        padding: 15px;
+    }
+
+    .tech-item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .cert-list {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .social-icons {
+        gap: 15px;
+    }
+
+    .social-icons a {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+
+    .contact ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
