@@ -193,6 +193,15 @@ main {
     font-weight: 700;
 }
 
+.certifications h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 500;
+}
+ 
 .tech-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
