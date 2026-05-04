@@ -4,10 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bong Joseph Sigayan | Web Portfolio</title>
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+        <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="styles.css">
     </head>
+
     <body>
         <header>
             <nav class="navbar">
@@ -18,21 +22,32 @@
                 <a href="contacts.html" class="nav-btn">Contact</a>
             </nav>
         </header>
+
         <main>
-            <section class="hero">
-                <h1 class="fade-in">Bong Joseph Sigayan</h1>
-                <img src="Images-and-Logos/profilepicture.sigayan.jpg" alt="Bong Joseph Sigayan" class="profile-pic fade-in">
-                <p class="fade-in">Hello! I'm Bong Joseph Sigayan, a student currently pursuing a Bachelor of Science in Information Technology. I am eager to improve my skills, gain more knowledge, and explore different areas within the IT field to prepare myself for future opportunities.</p>
+            <section class="hero bg-zinc-800/40 rounded-2xl shadow-xl border border-red-500/20">
+                <h1 class="fade-in tracking-wide drop-shadow-lg">Bong Joseph Sigayan</h1>
+
+                <img 
+  src="Images-and-Logos/profilepicture.sigayan.jpg" 
+  alt="Bong Joseph Sigayan" 
+  class="profile-pic fade-in mx-auto block">
+
+                <p class="fade-in max-w-3xl mx-auto">
+                    Hello! I'm Bong Joseph Sigayan, a student currently pursuing a Bachelor of Science in Information Technology. I am eager to improve my skills, gain more knowledge, and explore different areas within the IT field to prepare myself for future opportunities.
+                </p>
+
                 <div class="social-icons fade-in">
-                    <a href="https://www.linkedin.com/in/bong-joseph-sigayan-5b22a2406/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/bong-joseph-sigayan-5b22a2406/" target="_blank" rel="noopener noreferrer" class="shadow-lg hover:shadow-red-500/40">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
-                    <a href="https://github.com/Bjmko252006" target="_blank" rel="noopener noreferrer">
+
+                    <a href="https://github.com/Bjmko252006" target="_blank" rel="noopener noreferrer" class="shadow-lg hover:shadow-red-500/40">
                         <i class="fa-brands fa-github"></i>
                     </a>
                 </div> 
             </section>
         </main> 
+
         <script src="script.js"></script>
     </body>
 </html>
