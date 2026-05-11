@@ -78,8 +78,8 @@ main {
 }
 
 .profile-pic {
-    width: 330px;
-    height: 330px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
     object-fit: cover;
     display: block;
@@ -551,4 +551,22 @@ footer {
     footer {
         font-size: 0.9rem;
     }
+}
+#animated-text {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: var(--text-color);
+    font-weight: 500;
+    min-height: 120px;
+    opacity: 1;
+}
+#about-text-1,
+#about-text-2 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    text-align: justify;
+    color: var(--text-color);
+    font-weight: 500;
+    min-height: 100px;
 }
