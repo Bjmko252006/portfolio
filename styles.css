@@ -182,6 +182,27 @@ main {
     text-align: justify;
 }
 
+/* Animated Text */
+#animated-text {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: var(--text-color);
+    font-weight: 500;
+    min-height: 120px;
+    opacity: 1;
+}
+
+#about-text-1,
+#about-text-2 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    text-align: justify;
+    color: var(--text-color);
+    font-weight: 500;
+    min-height: 100px;
+}
+
 /* Tech Stack Section */
 .techstack {
     padding: 40px 20px;
@@ -207,11 +228,9 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     text-align: center;
     padding: 20px;
     min-height: 220px;
-
     background-color: var(--light-gray);
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -229,10 +248,8 @@ main {
     width: 100px;
     height: 100px;
     object-fit: contain;
-
     display: block;
     margin: 0 auto 15px auto;
-
     transition: transform 0.3s ease;
 }
 
@@ -401,19 +418,31 @@ footer {
     font-weight: 500;
 }
 
-/* Responsive Design - Tablet */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
+/* Responsive Design - Desktop and Laptop: 769px and above */
+@media (min-width: 769px) {
+    main {
+        max-width: 1000px;
+        padding: 40px 20px;
     }
 
     .profile-pic {
-        width: 180px;
-        height: 180px;
+        width: 500px;
+        height: 500px;
     }
 
-    .hero p {
-        font-size: 1rem;
+    .tech-list {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .cert-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Responsive Design - Tablet: 321px to 768px */
+@media (min-width: 321px) and (max-width: 768px) {
+    main {
+        padding: 30px 15px;
     }
 
     .navbar {
@@ -422,10 +451,11 @@ footer {
     }
 
     .nav-btn {
-        padding: 8px 15px;
+        padding: 8px 14px;
         font-size: 0.85rem;
     }
 
+    .hero h1,
     .about h1,
     .techstack h1,
     .certifications h1,
@@ -433,8 +463,25 @@ footer {
         font-size: 2rem;
     }
 
+    .profile-pic {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero p,
+    #animated-text,
+    #about-text-1,
+    #about-text-2 {
+        font-size: 1rem;
+    }
+
     .tech-list {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 20px;
+    }
+
+    .cert-list {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 20px;
     }
 
@@ -445,11 +492,6 @@ footer {
     .tech-item img {
         width: 80px;
         height: 80px;
-    }
-
-    .cert-list {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 20px;
     }
 
     .social-icons {
@@ -463,22 +505,10 @@ footer {
     }
 }
 
-/* Responsive Design - Mobile */
+/* Responsive Design - Mobile: 320px and below */
 @media (max-width: 320px) {
-    .hero h1 {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-    }
-
-    .profile-pic {
-        width: 120px;
-        height: 120px;
-        margin-bottom: 20px;
-    }
-
-    .hero p {
-        font-size: 0.9rem;
-        margin-bottom: 20px;
+    main {
+        padding: 20px 10px;
     }
 
     .navbar {
@@ -494,20 +524,24 @@ footer {
         text-align: center;
     }
 
-    main {
-        padding: 20px 10px;
-    }
-
+    .hero h1,
     .about h1,
     .techstack h1,
     .certifications h1,
     .contact h1 {
         font-size: 1.5rem;
-        margin-bottom: 25px;
     }
 
-    .about p {
-        font-size: 0.95rem;
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero p,
+    #animated-text,
+    #about-text-1,
+    #about-text-2 {
+        font-size: 0.9rem;
         text-align: left;
     }
 
@@ -533,6 +567,11 @@ footer {
         padding: 10px;
     }
 
+    .contact ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
     .social-icons {
         gap: 15px;
     }
@@ -543,30 +582,7 @@ footer {
         font-size: 1.2rem;
     }
 
-    .contact ul {
-        flex-direction: column;
-        gap: 15px;
-    }
-
     footer {
         font-size: 0.9rem;
     }
-}
-#animated-text {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    color: var(--text-color);
-    font-weight: 500;
-    min-height: 120px;
-    opacity: 1;
-}
-#about-text-1,
-#about-text-2 {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    line-height: 1.8;
-    text-align: justify;
-    color: var(--text-color);
-    font-weight: 500;
-    min-height: 100px;
 }
