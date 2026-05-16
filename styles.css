@@ -696,3 +696,11 @@ footer {
 
     transform: scale(1.05);
 }
+
+.nav-name {
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-right: auto;
+    letter-spacing: 0.5px;
+}
